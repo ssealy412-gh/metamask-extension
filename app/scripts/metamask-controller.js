@@ -1075,7 +1075,6 @@ export default class MetamaskController extends EventEmitter {
       alertController,
       approvalController,
       appStateController,
-      assetsContractController,
       collectiblesController,
       collectibleDetectionController,
       assetsContractController,
