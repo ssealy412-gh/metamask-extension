@@ -4,7 +4,12 @@ const { version: reactVersion } = require('react/package.json');
 module.exports = {
   root: true,
   // Ignore files which are also in .prettierignore
-  ignorePatterns: ['app/vendor/**', 'dist/**/*', 'development/chromereload.js'],
+  ignorePatterns: [
+    'app/vendor/**',
+    'dist/**/*',
+    'development/chromereload.js',
+    'node_modules/**/*',
+  ],
   overrides: [
     /**
      * == Modules ==
@@ -36,6 +41,7 @@ module.exports = {
         path.resolve(__dirname, '.eslintrc.base.js'),
         path.resolve(__dirname, '.eslintrc.node.js'),
         path.resolve(__dirname, '.eslintrc.babel.js'),
+        path.resolve(__dirname, '.eslintrc.typescript-compat.js'),
       ],
       parserOptions: {
         sourceType: 'module',
@@ -44,6 +50,19 @@ module.exports = {
         // This rule does not work with CommonJS modules. We will just have to
         // trust that all of the files specified above are indeed modules.
         'import/unambiguous': 'off',
+      },
+      settings: {
+        'import/resolver': {
+          // When determining the location of a `require()` call, use Node's
+          // resolution algorithm, then fall back to TypeScript's. This allows
+          // TypeScript files (which Node's algorithm doesn't recognize) to be
+          // imported from JavaScript files, while also preventing issues when
+          // using packages like `prop-types` (where we would otherwise get "No
+          // default export found in imported module 'prop-types'" from
+          // TypeScript because imports work differently there).
+          node: {},
+          typescript: {},
+        },
       },
     },
     /**
@@ -70,9 +89,75 @@ module.exports = {
         path.resolve(__dirname, '.eslintrc.base.js'),
         path.resolve(__dirname, '.eslintrc.node.js'),
         path.resolve(__dirname, '.eslintrc.babel.js'),
+        path.resolve(__dirname, '.eslintrc.typescript-compat.js'),
       ],
       parserOptions: {
         sourceType: 'module',
+      },
+      settings: {
+        'import/resolver': {
+          // When determining the location of an `import`, use Node's resolution
+          // algorithm, then fall back to TypeScript's. This allows TypeScript
+          // files (which Node's algorithm doesn't recognize) to be imported
+          // from JavaScript files, while also preventing issues when using
+          // packages like `prop-types` (where we would otherwise get "No
+          // default export found in imported module 'prop-types'" from
+          // TypeScript because imports work differently there).
+          node: {},
+          typescript: {},
+        },
+      },
+    },
+    /**
+     * TypeScript files
+     */
+    {
+      files: ['*.{ts,tsx}'],
+      extends: [
+        path.resolve(__dirname, '.eslintrc.base.js'),
+        '@metamask/eslint-config-typescript',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        path.resolve(__dirname, '.eslintrc.typescript-compat.js'),
+      ],
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+        project: ['./tsconfig.json'],
+      },
+      rules: {
+        // Turn this back on as per
+        // <https://github.com/alexgorbatchev/eslint-import-resolver-typescript>
+        'import/no-unresolved': 'error',
+
+        // Disabled due to incompatibility with Record<string, unknown>.
+        // See: <https://github.com/Microsoft/TypeScript/issues/15300#issuecomment-702872440>
+        '@typescript-eslint/consistent-type-definitions': 'off',
+
+        // Modified to include the 'ignoreRestSiblings' option.
+        // TODO: Migrate this rule change back into `@metamask/eslint-config`
+        '@typescript-eslint/no-unused-vars': [
+          'error',
+          {
+            vars: 'all',
+            args: 'all',
+            argsIgnorePattern: '[_]+',
+            ignoreRestSiblings: true,
+          },
+        ],
+      },
+      settings: {
+        'import/resolver': {
+          // When determining the location of an `import`, prefer TypeScript's
+          // resolution algorithm. Note that due to how we've configured
+          // TypeScript in `tsconfig.json`, we are able to import JavaScript
+          // files from TypeScript files.
+          typescript: {},
+        },
+      },
+    },
+    {
+      files: ['*.d.ts'],
+      parserOptions: {
+        sourceType: 'script',
       },
     },
 
