@@ -5,10 +5,10 @@ import {
   multiplyCurrencies,
 } from '../../../shared/modules/conversion.utils';
 import { getTokenStandardAndDetails } from '../../store/actions';
+import { ERC1155, ERC20, ERC721 } from '../constants/common';
 import * as util from './util';
 import { formatCurrency } from './confirm-tx.util';
 import { parseTransactionData } from './transactions.util';
-import { ERC1155, ERC20, ERC721 } from '../constants/common';
 
 const DEFAULT_SYMBOL = '';
 

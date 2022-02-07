@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 // import ConfirmTokenTransactionBaseContainer from '../confirm-token-transaction-base';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory, useParams } from 'react-router';
 import ConfirmTokenTransactionBase from '../confirm-token-transaction-base/confirm-token-transaction-base.component';
 import { SEND_ROUTE } from '../../helpers/constants/routes';
-import { useDispatch, useSelector } from 'react-redux';
 import { ASSET_TYPES, editTransaction } from '../../ducks/send';
-import { useHistory, useParams } from 'react-router';
 import {
   contractExchangeRateSelector,
   currentNetworkTxListSelector,

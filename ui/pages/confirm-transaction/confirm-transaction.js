@@ -105,7 +105,7 @@ export const ConfirmTransaction = () => {
       beforeUnload();
       window.removeEventListener('beforeunload', beforeUnload);
     };
-  }, []);
+  }, [transactionId, paramsTransactionId]);
 
   const previousParamsTransactionId = usePrevious(paramsTransactionId);
   const previousTransactionId = usePrevious(transactionId);

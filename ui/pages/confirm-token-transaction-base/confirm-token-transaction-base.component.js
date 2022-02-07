@@ -1,6 +1,7 @@
 import React, { useContext, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import BigNumber from 'bignumber.js';
+import { useSelector } from 'react-redux';
 import { I18nContext } from '../../contexts/i18n';
 import ConfirmTransactionBase from '../confirm-transaction-base';
 import UserPreferencedCurrencyDisplay from '../../components/app/user-preferenced-currency-display';
@@ -10,7 +11,11 @@ import {
   addFiat,
   roundExponential,
 } from '../../helpers/utils/confirm-tx.util';
-import { getWeiHexFromDecimalValue, hexWEIToDecETH, hexWEIToDecGWEI } from '../../helpers/utils/conversions.util';
+import {
+  getWeiHexFromDecimalValue,
+  hexWEIToDecETH,
+  hexWEIToDecGWEI,
+} from '../../helpers/utils/conversions.util';
 import {
   ERC1155,
   ERC20,
@@ -22,7 +27,6 @@ import {
   contractExchangeRateSelector,
   getCurrentCurrency,
 } from '../../selectors';
-import { useSelector } from 'react-redux';
 import {
   getConversionRate,
   getNativeCurrency,
@@ -47,7 +51,7 @@ export default function ConfirmTokenTransactionBase({
   const nativeCurrency = useSelector(getNativeCurrency);
   const currentCurrency = useSelector(getCurrentCurrency);
   const conversionRate = useSelector(getConversionRate);
-  
+
   const ethTransactionTotalMaxAmount = Number(
     hexWEIToDecETH(hexMaximumTransactionFee),
   ).toFixed(6);
