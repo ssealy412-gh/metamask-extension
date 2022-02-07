@@ -23,11 +23,9 @@ const BlockieIdenticon = ({ address, diameter, alt = '', borderRadius }) => {
         src={dataUrl}
         height={diameter}
         width={diameter}
-        style={
-          {
-            borderRadius: borderRadius,
-          }
-        }
+        style={{
+          borderRadius,
+        }}
         alt={alt}
       />
     </>
@@ -38,7 +36,7 @@ BlockieIdenticon.propTypes = {
   address: PropTypes.string.isRequired,
   diameter: PropTypes.number.isRequired,
   alt: PropTypes.string,
-  style: PropTypes.string,
+  borderRadius: PropTypes.string,
 };
 
 export default BlockieIdenticon;
