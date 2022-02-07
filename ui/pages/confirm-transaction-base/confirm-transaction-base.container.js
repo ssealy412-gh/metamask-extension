@@ -207,7 +207,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     balance: accountData?.balance,
     fromAddress,
-    fromName: identity?.fromName,
+    fromName: identity?.name,
     toAddress,
     toEns,
     toName,
