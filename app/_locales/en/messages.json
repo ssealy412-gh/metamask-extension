@@ -1198,7 +1198,7 @@
     "message": "Forget this device"
   },
   "forgotPassword": {
-    "message": "Forgot Password?"
+    "message": "Forgot password?"
   },
   "forgotPasswordSubHeader": {
     "message": "MetaMask cannot recover your password."
