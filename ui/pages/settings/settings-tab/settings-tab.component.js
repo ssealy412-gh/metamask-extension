@@ -212,7 +212,7 @@ export default class SettingsTab extends PureComponent {
                   id="blockies"
                   address={selectedAddress}
                   diameter={32}
-                  style="50%"
+                  borderRadius="50%"
                 />
               </div>
               <Typography

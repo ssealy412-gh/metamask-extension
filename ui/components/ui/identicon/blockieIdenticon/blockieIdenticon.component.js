@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { renderIcon } from '@download/blockies';
 
-const BlockieIdenticon = ({ address, diameter, alt, style }) => {
+const BlockieIdenticon = ({ address, diameter, alt = '', borderRadius }) => {
   const [dataUrl, setDataUrl] = useState(null);
   const canvasRef = useRef(null);
 
@@ -25,10 +25,10 @@ const BlockieIdenticon = ({ address, diameter, alt, style }) => {
         width={diameter}
         style={
           {
-            borderRadius: style,
-          } || null
+            borderRadius: borderRadius,
+          }
         }
-        alt={alt || ''}
+        alt={alt}
       />
     </>
   );
