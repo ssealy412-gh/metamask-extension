@@ -167,6 +167,11 @@ export const ConfirmTransaction = () => {
       />
       <Route
         exact
+        path={`${CONFIRM_TRANSACTION_ROUTE}/:id?${CONFIRM_TOKEN_METHOD_PATH}`}
+        component={ConfirmTransactionBase}
+      />
+      <Route
+        exact
         path={`${CONFIRM_TRANSACTION_ROUTE}/:id?${SIGNATURE_REQUEST_PATH}`}
         component={ConfTx}
       />

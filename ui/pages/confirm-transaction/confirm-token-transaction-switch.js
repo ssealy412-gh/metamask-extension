@@ -68,7 +68,6 @@ export const ConfirmTokenTransactionSwitch = ({ transaction }) => {
       <Route
         exact
         path={`${CONFIRM_TRANSACTION_ROUTE}/:id?${CONFIRM_TRANSFER_FROM_PATH}`}
-        // component={ConfirmTokenTransactionBaseContainer}
         render={() => (
           <ConfirmTokenTransactionBase
             assetStandard={assetStandard}
@@ -93,7 +92,6 @@ export const ConfirmTokenTransactionSwitch = ({ transaction }) => {
       <Route
         exact
         path={`${CONFIRM_TRANSACTION_ROUTE}/:id?${CONFIRM_SEND_TOKEN_PATH}`}
-        // component={ConfirmSendToken}
         render={() => (
           <ConfirmSendToken
             assetStandard={assetStandard}
@@ -114,11 +112,6 @@ export const ConfirmTokenTransactionSwitch = ({ transaction }) => {
             hexTransactionTotal={hexTransactionTotal}
           />
         )}
-      />
-      <Route
-        exact
-        path={`${CONFIRM_TRANSACTION_ROUTE}/:id?${CONFIRM_TOKEN_METHOD_PATH}`}
-        component={ConfirmTransactionBase}
       />
       <Route path="*" component={ConfirmTransactionSwitch} />
     </Switch>
