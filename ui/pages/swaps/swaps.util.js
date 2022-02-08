@@ -26,6 +26,9 @@ import {
   POLYGON_CHAIN_ID,
   LOCALHOST_CHAIN_ID,
   RINKEBY_CHAIN_ID,
+  ETH_TOKEN_IMAGE_URL,
+  BNB_TOKEN_IMAGE_URL,
+  MATIC_TOKEN_IMAGE_URL,
 } from '../../../shared/constants/network';
 import { SECOND } from '../../../shared/constants/time';
 import {
@@ -793,6 +796,23 @@ export const getNetworkNameByChainId = (chainId) => {
       return POLYGON;
     case RINKEBY_CHAIN_ID:
       return RINKEBY;
+    default:
+      return '';
+  }
+};
+
+/**
+ * @param {string} chainId
+ * @returns string token image url based on networks chainId
+ */
+export const getNetworkImageByChainId = (chainId) => {
+  switch (chainId) {
+    case MAINNET_CHAIN_ID:
+      return ETH_TOKEN_IMAGE_URL;
+    case BSC_CHAIN_ID:
+      return BNB_TOKEN_IMAGE_URL;
+    case POLYGON_CHAIN_ID:
+      return MATIC_TOKEN_IMAGE_URL;
     default:
       return '';
   }

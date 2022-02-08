@@ -13,12 +13,15 @@ import { setSelectedSettingsRpcUrl } from '../../../../store/actions';
 import { getEnvironmentType } from '../../../../../app/scripts/lib/util';
 import { ENVIRONMENT_TYPE_FULLSCREEN } from '../../../../../shared/constants/app';
 import { getProvider } from '../../../../selectors';
+import Identicon from '../../../../components/ui/identicon';
+import { getNetworkImageByChainId } from '../../../swaps/swaps.util';
 
 const NetworksListItem = ({ network, networkIsSelected, selectedRpcUrl }) => {
   const t = useI18nContext();
   const history = useHistory();
   const dispatch = useDispatch();
   const environmentType = getEnvironmentType();
+  const networkImageIcon = getNetworkImageByChainId(network.chainId);
   const isFullScreen = environmentType === ENVIRONMENT_TYPE_FULLSCREEN;
   const provider = useSelector(getProvider);
   const {
@@ -49,11 +52,21 @@ const NetworksListItem = ({ network, networkIsSelected, selectedRpcUrl }) => {
         }
       }}
     >
-      <ColorIndicator
-        color={labelKey}
-        type={ColorIndicator.TYPES.FILLED}
-        size={SIZES.LG}
-      />
+      {networkImageIcon ? (
+        <Identicon
+          className="networks-tab__content__custom-image"
+          diameter={24}
+          image={networkImageIcon}
+          imageBorder
+        />
+      ) : (
+        <ColorIndicator
+          color={labelKey}
+          type={ColorIndicator.TYPES.FILLED}
+          size={SIZES.XL}
+          iconClassName="fas fa-subway"
+        />
+      )}
       <div
         className={classnames('networks-tab__networks-list-name', {
           'networks-tab__networks-list-name--selected': displayNetworkListItemAsSelected,
