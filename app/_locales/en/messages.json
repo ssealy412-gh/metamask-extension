@@ -2555,9 +2555,6 @@
   "send": {
     "message": "Send"
   },
-  "sendingToTokenContractWarning": {
-    "message": "Warning: you are about to send to a token contract. Click to proceed."
-  },
   "sendAmount": {
     "message": "Send Amount"
   },
@@ -2577,6 +2574,9 @@
   "sendingNativeAsset": {
     "message": "Sending $1",
     "description": "$1 represents the native currency symbol for the current network (e.g. ETH or BNB)"
+  },
+  "sendingToTokenContractWarning": {
+    "message": "Warning: you are about to send to a token contract. Click to proceed."
   },
   "separateEachWord": {
     "message": "Separate each word with a single space"
