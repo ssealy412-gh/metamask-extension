@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
 import {
@@ -80,7 +81,6 @@ export const ConfirmTokenTransactionSwitch = ({ transaction }) => {
             tokenAmount={tokenAmount}
             tokenId={tokenId}
             userAddress={userAddress}
-            tokenAddress={tokenAddress}
             transaction={transaction}
             ethTransactionTotal={ethTransactionTotal}
             fiatTransactionTotal={fiatTransactionTotal}
@@ -111,4 +111,15 @@ export const ConfirmTokenTransactionSwitch = ({ transaction }) => {
       <Route path="*" component={ConfirmTransactionSwitch} />
     </Switch>
   );
+};
+
+ConfirmTokenTransactionSwitch.propTypes = {
+  transaction: PropTypes.shape({
+    origin: PropTypes.string,
+    txParams: PropTypes.shape({
+      data: PropTypes.string,
+      to: PropTypes.string,
+      from: PropTypes.string,
+    }),
+  }),
 };

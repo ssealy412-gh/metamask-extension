@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import { Switch, Route, useHistory, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import Loading from '../../components/ui/loading-screen';
@@ -59,24 +58,36 @@ export const ConfirmTransaction = () => {
 
   const { id: transactionId, type, txParams: { data } = {} } = transaction;
 
-  const beforeUnload = () => {
-    setIsMounted(false);
-    if (pollingToken) {
-      disconnectGasFeeEstimatePoller(pollingToken);
-      removePollingTokenFromAppState(pollingToken);
-    }
-  };
-
+  const previousParamsTransactionId = usePrevious(paramsTransactionId);
+  const previousTransactionId = usePrevious(transactionId);
+  const prevData = usePrevious(data);
+  const prevMostRecentOverviewPage = usePrevious(mostRecentOverviewPage);
+  const prevTotalUnapprovedCount = usePrevious(totalUnapprovedCount);
   useEffect(() => {
-    let pollingToken;
-    const getAndSetPollingToken = async () => {
-      pollingToken = await getGasFeeEstimatesAndStartPolling();
-      if (isMounted) {
-        setPollingToken(pollingToken);
-        addPollingTokenToAppState(pollingToken);
-      } else {
+    if (
+      prevData === data &&
+      prevMostRecentOverviewPage === mostRecentOverviewPage
+    ) {
+      return undefined;
+    }
+
+    const beforeUnload = () => {
+      setIsMounted(false);
+      if (pollingToken) {
         disconnectGasFeeEstimatePoller(pollingToken);
         removePollingTokenFromAppState(pollingToken);
+      }
+    };
+
+    let gasFeePollingToken;
+    const getAndSetPollingToken = async () => {
+      gasFeePollingToken = await getGasFeeEstimatesAndStartPolling();
+      if (isMounted) {
+        setPollingToken(gasFeePollingToken);
+        addPollingTokenToAppState(gasFeePollingToken);
+      } else {
+        disconnectGasFeeEstimatePoller(gasFeePollingToken);
+        removePollingTokenFromAppState(gasFeePollingToken);
       }
     };
     getAndSetPollingToken();
@@ -85,7 +96,7 @@ export const ConfirmTransaction = () => {
 
     if (!totalUnapprovedCount && !sendTo) {
       history.replace(mostRecentOverviewPage);
-      return;
+      return undefined;
     }
 
     getContractMethodData(data);
@@ -99,10 +110,21 @@ export const ConfirmTransaction = () => {
       beforeUnload();
       window.removeEventListener('beforeunload', beforeUnload);
     };
-  }, [transactionId, paramsTransactionId]);
-
-  const previousParamsTransactionId = usePrevious(paramsTransactionId);
-  const previousTransactionId = usePrevious(transactionId);
+  }, [
+    transactionId,
+    paramsTransactionId,
+    dispatch,
+    history,
+    data,
+    prevData,
+    isMounted,
+    mostRecentOverviewPage,
+    prevMostRecentOverviewPage,
+    sendTo,
+    totalUnapprovedCount,
+    prevTotalUnapprovedCount,
+    pollingToken,
+  ]);
 
   useEffect(() => {
     if (
@@ -131,9 +153,13 @@ export const ConfirmTransaction = () => {
   }, [
     paramsTransactionId,
     previousParamsTransactionId,
+    transactionId,
     previousTransactionId,
     totalUnapprovedCount,
     data,
+    history,
+    dispatch,
+    mostRecentOverviewPage,
   ]);
 
   const validTransactionId =
@@ -184,19 +210,4 @@ export const ConfirmTransaction = () => {
   ) : (
     <Loading />
   );
-};
-
-ConfirmTransaction.propTypes = {
-  history: PropTypes.object.isRequired,
-  totalUnapprovedCount: PropTypes.number.isRequired,
-  sendTo: PropTypes.string,
-  setTransactionToConfirm: PropTypes.func,
-  clearConfirmTransaction: PropTypes.func,
-  mostRecentOverviewPage: PropTypes.string.isRequired,
-  transaction: PropTypes.object,
-  getContractMethodData: PropTypes.func,
-  transactionId: PropTypes.string,
-  paramsTransactionId: PropTypes.string,
-  isTokenMethodAction: PropTypes.bool,
-  setDefaultHomeActiveTabName: PropTypes.func,
 };

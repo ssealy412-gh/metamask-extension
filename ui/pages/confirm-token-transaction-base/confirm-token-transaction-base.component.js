@@ -14,7 +14,6 @@ import {
 import {
   getWeiHexFromDecimalValue,
   hexWEIToDecETH,
-  hexWEIToDecGWEI,
 } from '../../helpers/utils/conversions.util';
 import {
   ERC1155,
@@ -138,16 +137,15 @@ export default function ConfirmTokenTransactionBase({
 
 ConfirmTokenTransactionBase.propTypes = {
   image: PropTypes.string,
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
+  assetName: PropTypes.string,
+  toAddress: PropTypes.string,
   tokenAddress: PropTypes.string,
   tokenAmount: PropTypes.string,
-  fiatTransactionTotal: PropTypes.string,
-  ethTransactionTotal: PropTypes.string,
-  contractExchangeRate: PropTypes.number,
-  conversionRate: PropTypes.number,
-  currentCurrency: PropTypes.string,
+  tokenSymbol: PropTypes.string,
+  tokenId: PropTypes.string,
+  assetStandard: PropTypes.string,
   onEdit: PropTypes.func,
-  nativeCurrency: PropTypes.string,
-  ethTransactionTotalMaxAmount: PropTypes.string,
+  ethTransactionTotal: PropTypes.string,
+  fiatTransactionTotal: PropTypes.string,
+  hexMaximumTransactionFee: PropTypes.string,
 };

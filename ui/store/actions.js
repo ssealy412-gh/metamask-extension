@@ -2772,46 +2772,6 @@ export function loadingTokenParamsFinished() {
   };
 }
 
-export function getTokenParams(address) {
-  return (dispatch, getState) => {
-    const tokenList = getTokenList(getState());
-    const existingTokens = getState().metamask.tokens;
-    const { selectedAddress } = getState().metamask;
-    const { chainId } = getState().metamask.provider;
-    const existingCollectibles = getState().metamask?.allCollectibles?.[
-      selectedAddress
-    ]?.[chainId];
-    const existingToken = existingTokens.find(({ address: tokenAddress }) =>
-      isEqualCaseInsensitive(address, tokenAddress),
-    );
-    const existingCollectible = existingCollectibles?.find(
-      ({ address: collectibleAddress }) =>
-        isEqualCaseInsensitive(address, collectibleAddress),
-    );
-
-    if (existingCollectible) {
-      return null;
-    }
-
-    if (existingToken) {
-      return Promise.resolve({
-        symbol: existingToken.symbol,
-        decimals: existingToken.decimals,
-      });
-    }
-
-    dispatch(loadingTokenParamsStarted());
-    log.debug(`loadingTokenParams`);
-
-    return getSymbolAndDecimals(address, tokenList).then(
-      ({ symbol, decimals }) => {
-        dispatch(addToken(address, symbol, Number(decimals)));
-        dispatch(loadingTokenParamsFinished());
-      },
-    );
-  };
-}
-
 export function setSeedPhraseBackedUp(seedPhraseBackupState) {
   return (dispatch) => {
     log.debug(`background.setSeedPhraseBackedUp`);

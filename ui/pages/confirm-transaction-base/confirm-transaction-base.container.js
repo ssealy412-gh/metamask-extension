@@ -98,10 +98,6 @@ const mapStateToProps = (state, ownProps) => {
       ({ id }) => id === (transactionId || Number(paramsTransactionId)),
     ) || {};
 
-  // const transaction = totalUnapprovedCount
-  // ? unapprovedTxs[paramsTransactionId] || unconfirmedTransactions[0]
-  // : {};
-
   const {
     from: fromAddress,
     to: txParamsToAddress,
