@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-// import ConfirmTokenTransactionBaseContainer from '../confirm-token-transaction-base';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router-dom';
 import ConfirmTokenTransactionBase from '../confirm-token-transaction-base/confirm-token-transaction-base.component';
 import { SEND_ROUTE } from '../../helpers/constants/routes';
 import { ASSET_TYPES, editTransaction } from '../../ducks/send';
@@ -18,7 +17,14 @@ import {
 import { ERC20, ERC721 } from '../../helpers/constants/common';
 import { getMaximumGasTotalInHexWei } from '../../../shared/modules/gas.utils';
 
-export default function ConfirmSendToken(props) {
+export default function ConfirmSendToken({
+  assetStandard,
+  assetName,
+  tokenSymbol,
+  tokenAmount,
+  tokenId,
+  transaction,
+}) {
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -58,8 +64,8 @@ export default function ConfirmSendToken(props) {
   // } = confirmTransaction;
 
   const hexMaximumTransactionFee = getMaximumGasTotalInHexWei({
-    gasLimit: props.transaction.gas ?? '0x0',
-    gasPrice: props.transaction.gasPrice ?? '0x0',
+    gasLimit: transaction.gas ?? '0x0',
+    gasPrice: transaction.gasPrice ?? '0x0',
   });
   // const { hexMaximumTransactionFee } = transactionFeeSelector(
   //   state,
@@ -72,11 +78,11 @@ export default function ConfirmSendToken(props) {
 
   let title, subtitle;
 
-  if (props.assetStandard === ERC721) {
-    title = props.assetName;
-    subtitle = `#${props.tokenId}`;
-  } else if (props.assetStandard === ERC20) {
-    title = `${props.tokenAmount} ${props.tokenSymbol}`;
+  if (assetStandard === ERC721) {
+    title = assetName;
+    subtitle = `#${tokenId}`;
+  } else if (assetStandard === ERC20) {
+    title = `${tokenAmount} ${tokenSymbol}`;
   }
 
   return (
@@ -89,7 +95,13 @@ export default function ConfirmSendToken(props) {
       contractExchangeRate={contractExchangeRate}
       title={title}
       subtitle={subtitle}
-      {...props}
+      assetStandard={assetStandard}
+      assetName={assetName}
+      tokenSymbol={tokenSymbol}
+      tokenAmount={tokenAmount}
+      tokenId={tokenId}
+      transaction={transaction}
+      // {...props}
     />
   );
 }
