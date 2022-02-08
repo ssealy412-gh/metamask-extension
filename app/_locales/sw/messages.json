@@ -286,6 +286,9 @@
   "deleteNetworkDescription": {
     "message": "Una uhakika unataka kufuta mtandao huu?"
   },
+  "depositEther": {
+    "message": "Weka Ether"
+  },
   "details": {
     "message": "Maelezo"
   },
@@ -571,6 +574,9 @@
   "myAccounts": {
     "message": "Akaunti zangu"
   },
+  "needEtherInWallet": {
+    "message": "Ili kuingiliana na programu zilizosambazwa kwa kutumia MetaMask, utahitaji kuwa na Ether kwenye waleti yako."
+  },
   "needImportFile": {
     "message": "Unapaswa kuchagua faili la kuhamisha.",
     "description": "User is important an account and needs to add a file to continue"
@@ -853,6 +859,9 @@
   },
   "sendTokens": {
     "message": "Tuma Vianzio"
+  },
+  "separateEachWord": {
+    "message": "Tenganisha kila neno kwa nafasi moja"
   },
   "settings": {
     "message": "Mipangilio"

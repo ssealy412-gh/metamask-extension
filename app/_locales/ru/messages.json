@@ -389,6 +389,12 @@
   "buy": {
     "message": "Купить"
   },
+  "buyWithTransak": {
+    "message": "Купить ETH с помощью Transak"
+  },
+  "buyWithTransakDescription": {
+    "message": "Transak поддерживает дебетовые карты и банковские переводы (в зависимости от местоположения) в 59 странах. ETH будут зачислены на ваш счет MetaMask."
+  },
   "buyWithWyre": {
     "message": "Купить ETH с помощью Wyre"
   },
@@ -714,6 +720,9 @@
   },
   "deleteNetworkDescription": {
     "message": "Уверены, что хотите удалить эту сеть?"
+  },
+  "depositEther": {
+    "message": "Внести Ether"
   },
   "description": {
     "message": "Описание"
@@ -1284,6 +1293,9 @@
   "high": {
     "message": "Агрессивный"
   },
+  "highGasSettingToolTipDialog": {
+    "message": "Высокая вероятность даже на волатильных рынках"
+  },
   "highGasSettingToolTipMessage": {
     "message": "Используйте $1, чтобы компенсировать скачки сетевого трафика из-за таких событий, как дропы популярных NFT.",
     "description": "$1 is key 'high' (text: 'Aggressive') separated here so that it can be passed in with bold fontweight"
@@ -1692,6 +1704,9 @@
   },
   "name": {
     "message": "Имя"
+  },
+  "needEtherInWallet": {
+    "message": "Для взаимодействия с децентрализованными приложениями с помощью MetaMask вам понадобится Ether в вашем кошельке."
   },
   "needHelp": {
     "message": "Нужна помощь? Обратитесь в $1",
@@ -2459,6 +2474,9 @@
   "sendingNativeAsset": {
     "message": "Отправка $1...",
     "description": "$1 represents the native currency symbol for the current network (e.g. ETH or BNB)"
+  },
+  "separateEachWord": {
+    "message": "Отделяйте каждое слово одним пробелом"
   },
   "setAdvancedPrivacySettings": {
     "message": "Задать дополнительные настройки конфиденциальности"
@@ -3371,6 +3389,9 @@
   },
   "walletCreationSuccessTitle": {
     "message": "Кошелек создан"
+  },
+  "walletSeedRestore": {
+    "message": "Секретная фраза восстановления кошелька"
   },
   "web3ShimUsageNotification": {
     "message": "Мы заметили, что текущий веб-сайт пытался использовать удаленный API window.web3. Если сайт не работает, нажмите $1 для получения дополнительной информации.",

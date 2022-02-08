@@ -292,6 +292,9 @@
   "deleteNetworkDescription": {
     "message": "Haluatko varmasti poistaa tämän verkon?"
   },
+  "depositEther": {
+    "message": "Talleta Etheriä"
+  },
   "details": {
     "message": "Tiedot"
   },
@@ -593,6 +596,9 @@
   "myAccounts": {
     "message": "Omat tilit"
   },
+  "needEtherInWallet": {
+    "message": "Ollaksesi vuorovaikutuksessa hajautettujen sovellusten kanssa sinulla on oltava lompakossasi Ether."
+  },
   "needImportFile": {
     "message": "Sinun tarvitsee valita tuotava tiedosto.",
     "description": "User is important an account and needs to add a file to continue"
@@ -872,6 +878,9 @@
   },
   "sendTokens": {
     "message": "Lähetä tietueita"
+  },
+  "separateEachWord": {
+    "message": "Erottele sanat toisistaan yhdellä välilyönnillä"
   },
   "settings": {
     "message": "Asetukset"

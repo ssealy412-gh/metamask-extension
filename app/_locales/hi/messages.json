@@ -389,6 +389,12 @@
   "buy": {
     "message": "खरीदें"
   },
+  "buyWithTransak": {
+    "message": "Transak के साथ ETH खरीदें"
+  },
+  "buyWithTransakDescription": {
+    "message": "Transak 59+ देशों में डेबिट कार्ड और बैंक हस्तांतरण (स्थान के आधार पर) का समर्थन करता है। ETH आपके MetaMask अकाउंट में जमा करता है।"
+  },
   "buyWithWyre": {
     "message": "Wyre के जरिए ETH खरीदें"
   },
@@ -714,6 +720,9 @@
   },
   "deleteNetworkDescription": {
     "message": "क्या आप वाकई इस नेटवर्क को हटाना चाहते हैं?"
+  },
+  "depositEther": {
+    "message": "Ether जमा करें"
   },
   "description": {
     "message": "विवरण"
@@ -1284,6 +1293,9 @@
   "high": {
     "message": "आक्रामक"
   },
+  "highGasSettingToolTipDialog": {
+    "message": "उच्च संभावना, अस्थिर बाजारों में भी"
+  },
   "highGasSettingToolTipMessage": {
     "message": "लोकप्रिय NFT ड्रॉप जैसी चीज़ों की वजह से नेटवर्क ट्रैफिक में वृद्धि को कवर करने के लिए $1 का उपयोग करें।",
     "description": "$1 is key 'high' (text: 'Aggressive') separated here so that it can be passed in with bold fontweight"
@@ -1444,7 +1456,7 @@
     "message": "ज्ञात अनुबंध पता।"
   },
   "knownTokenWarning": {
-    "message": "यह कार्रवाई उन टोकन को संपादित करेगी, जो पहले से ही आपके वॉलेट में सूचीबद्ध हैं, जिसका उपयोग आपको फ़िश करने के लिए किया जा सकता है। केवल तभी अनुमोदित करें, जब आप इस बात को लेकर सुनिश्चित हों कि आप इन टोकन का प्रतिनिधित्व बदलना चाहते हैं। $1 के बारे में और अधिक जानें"
+    "message": "यह कार्रवाई उन टोकन को संपादित करेगी, जो पहले से ही आपके वॉलेट में सूचीबद्ध हैं, जिसका उपयोग आपको फ़िश करने के लिए किया जा सकता है। केवल तभी अनुमोदित करें, जब आप इस बात को लेकर सुनिश्चित हों कि आप इन टोकन का प्रतिनिधित्व बदलना चाहते हैं।"
   },
   "kovan": {
     "message": "Kovan टेस्ट नेटवर्क"
@@ -1692,6 +1704,9 @@
   },
   "name": {
     "message": "नाम"
+  },
+  "needEtherInWallet": {
+    "message": "MetaMask का उपयोग करके विकेंद्रीकृत एप्लिकेशन के साथ सहभागिता करने के लिए, आपको अपने वॉलेट में Ether की आवश्यकता होगी।"
   },
   "needHelp": {
     "message": "मदद चाहिए? $1 से संपर्क करें",
@@ -2459,6 +2474,9 @@
   "sendingNativeAsset": {
     "message": "$1 भेजा जा रहा है",
     "description": "$1 represents the native currency symbol for the current network (e.g. ETH or BNB)"
+  },
+  "separateEachWord": {
+    "message": "प्रत्येक शब्द को एक रिक्ति से अलग करें"
   },
   "setAdvancedPrivacySettings": {
     "message": "एडवांस गोपनीयता सेटिंग्स निर्धारित करें"
@@ -3371,6 +3389,9 @@
   },
   "walletCreationSuccessTitle": {
     "message": "वॉलेट का निर्माण सफल हुआ"
+  },
+  "walletSeedRestore": {
+    "message": "वॉलेट का गुप्त रिकवरी फ्रेज़"
   },
   "web3ShimUsageNotification": {
     "message": "हमने देखा है कि वर्तमान वेबसाइट ने हटाए गए window.web3 API का उपयोग करने की कोशिश की। यदि साइट में गड़बड़ी लगती है, तो कृपया अधिक जानकारी के लिए $1 पर क्लिक करें।",

@@ -289,6 +289,9 @@
   "deleteNetworkDescription": {
     "message": "Estàs segur que vols eliminar aquesta xarxa?"
   },
+  "depositEther": {
+    "message": "Diposita Ether"
+  },
   "details": {
     "message": "Detalls"
   },
@@ -577,6 +580,9 @@
   "myAccounts": {
     "message": "Els meus Comptes"
   },
+  "needEtherInWallet": {
+    "message": "Per a interactuar amb aplicacions descentralitzades fent servir MetaMask, necessitaràs Ether al teu moneder."
+  },
   "needImportFile": {
     "message": "Has de seleccionar un arxiu per a importar.",
     "description": "User is important an account and needs to add a file to continue"
@@ -853,6 +859,9 @@
   },
   "sendTokens": {
     "message": "Enviar Fitxes"
+  },
+  "separateEachWord": {
+    "message": "Separa cada paraula amb un sol espai"
   },
   "settings": {
     "message": "Configuració"

@@ -292,6 +292,9 @@
   "deleteNetworkDescription": {
     "message": "Olete kindel, et soovite selle võrgu kustutada?"
   },
+  "depositEther": {
+    "message": "Eetri sissemakse"
+  },
   "details": {
     "message": "Üksikasjad"
   },
@@ -583,6 +586,9 @@
   "myAccounts": {
     "message": "Minu kontod"
   },
+  "needEtherInWallet": {
+    "message": "Selleks, et suhelda MetaMaski abil detsentraliseeritud rakendustega, peab teil rahakotis eetrit olema."
+  },
   "needImportFile": {
     "message": "Peate importimiseks faili valima.",
     "description": "User is important an account and needs to add a file to continue"
@@ -865,6 +871,9 @@
   },
   "sendTokens": {
     "message": "Saada lube"
+  },
+  "separateEachWord": {
+    "message": "Eraldage iga sõna ühe tühikuga"
   },
   "settings": {
     "message": "Seaded"

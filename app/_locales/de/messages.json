@@ -389,6 +389,12 @@
   "buy": {
     "message": "Kaufen"
   },
+  "buyWithTransak": {
+    "message": "ETH mit Transak kaufen"
+  },
+  "buyWithTransakDescription": {
+    "message": "Transak unterstützt Bankkarten und Banküberweisungen (je nach Standort) in mehr als 59 Ländern. ETH Einzahlungen auf Ihr MetaMask Konto."
+  },
   "buyWithWyre": {
     "message": "ETH mit Wyre kaufen"
   },
@@ -649,6 +655,10 @@
   "customGas": {
     "message": "Gas anpassen"
   },
+  "customGasSettingToolTipMessage": {
+    "message": "Verwenden Sie $1, um den Gaspreis anzupassen. Dies kann verwirrend sein, wenn Sie nicht damit vertraut sind. Interagieren Sie auf eigene Gefahr.",
+    "description": "$1 is key 'advanced' (text: 'Advanced') separated here so that it can be passed in with bold fontweight"
+  },
   "customGasSubTitle": {
     "message": "Höhere Gebühren können Bearbeitungszeiten verkürzen, wofür es allerdings keine Garantie gibt."
   },
@@ -718,6 +728,9 @@
   },
   "deleteNetworkDescription": {
     "message": "Sind Sie sicher, dass Sie dieses Netzwerk löschen möchten?"
+  },
+  "depositEther": {
+    "message": "Ether einzahlen"
   },
   "description": {
     "message": "Beschreibung"
@@ -967,6 +980,10 @@
   },
   "endOfFlowMessage9": {
     "message": "Mehr hierzu."
+  },
+  "endpointReturnedDifferentChainId": {
+    "message": "Der Endpunkt hat eine andere Ketten-ID zurückgegeben: $1",
+    "description": "$1 is the return value of eth_chainId from an RPC endpoint"
   },
   "ensIllegalCharacter": {
     "message": "Unzulässiges Zeichen für ENS."
@@ -1294,6 +1311,13 @@
   "high": {
     "message": "Aggressiv"
   },
+  "highGasSettingToolTipDialog": {
+    "message": "Hohe Wahrscheinlichkeit, sogar in volatilen Märkten"
+  },
+  "highGasSettingToolTipMessage": {
+    "message": "Benutzen Sie $1, um Anstiege im Netzwerkverkehr abzudecken, aufgrund von Dingen wie beliebten NFT-Drops.",
+    "description": "$1 is key 'high' (text: 'Aggressive') separated here so that it can be passed in with bold fontweight"
+  },
   "highLowercase": {
     "message": "hoch"
   },
@@ -1449,6 +1473,9 @@
   "knownAddressRecipient": {
     "message": "Bekannte Vertragsadresse."
   },
+  "knownTokenWarning": {
+    "message": "Mit dieser Aktion werden Token bearbeitet, die bereits in Ihrer Brieftasche aufgelistet sind, die verwendet werden können, um Sie zu phishen. Bestätigen Sie nur, wenn Sie sicher sind, dass Sie ändern wollen, was diese Token darstellen."
+  },
   "kovan": {
     "message": "Kovan Testnetzwerk"
   },
@@ -1561,6 +1588,9 @@
   },
   "lowLowercase": {
     "message": "niedrig"
+  },
+  "lowPriorityMessage": {
+    "message": "Zukünftige Transaktionen folgen auf diese. Dieser Preis wurde zuletzt vor einiger Zeit gesehen."
   },
   "mainnet": {
     "message": "Athereum Hauptnetz"
@@ -1692,6 +1722,9 @@
   },
   "name": {
     "message": "Name"
+  },
+  "needEtherInWallet": {
+    "message": "Um dezentralisierte Applikationen mit MetaMask verwenden zu können, benötigst du Ether in deiner Wallet."
   },
   "needHelp": {
     "message": "Brauchen Sie Hilfe? Kontaktieren Sie $1",
@@ -2395,6 +2428,9 @@
   "seedPhrasePlaceholder": {
     "message": "Trennen Sie jedes Wort durch ein einzelnes Leerzeichen."
   },
+  "seedPhrasePlaceholderPaste": {
+    "message": "Geheime Wiederherstellungsphrase aus der Zwischenablage einfügen"
+  },
   "seedPhraseReq": {
     "message": "Seed-Wörterfolgen bestehen aus 12 Wörtern"
   },
@@ -2453,6 +2489,9 @@
   "sendingNativeAsset": {
     "message": "$1 senden",
     "description": "$1 represents the native currency symbol for the current network (e.g. ETH or BNB)"
+  },
+  "separateEachWord": {
+    "message": "Trennen Sie die Wörter mit einem einzelnen Leerzeichen voneinander"
   },
   "setAdvancedPrivacySettings": {
     "message": "Erweiterte Privatsphäre-Einstellungen festlegen"
@@ -3368,6 +3407,9 @@
   },
   "walletCreationSuccessTitle": {
     "message": "Wallet-Erstellung erfolgreich"
+  },
+  "walletSeedRestore": {
+    "message": "Wallet Geheime Wiederherstellungsphrase"
   },
   "web3ShimUsageNotification": {
     "message": "Wir haben festgestellt, dass die aktuelle Website versucht hat, die entfernte window.web3 API zu verwenden. Sollte die Site defekt sein, klicken Sie bitte auf $1 für weitere Informationen.",

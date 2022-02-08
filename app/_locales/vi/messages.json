@@ -389,6 +389,12 @@
   "buy": {
     "message": "Mua"
   },
+  "buyWithTransak": {
+    "message": "Mua ETH bằng Transak"
+  },
+  "buyWithTransakDescription": {
+    "message": "Transak hỗ trợ thẻ ghi nợ và chuyển khoản ngân hàng (tùy vào địa điểm) tại hơn 59 quốc gia. Nạp ETH vào tài khoản MetaMask của bạn."
+  },
   "buyWithWyre": {
     "message": "Mua ETH qua Wyre"
   },
@@ -714,6 +720,9 @@
   },
   "deleteNetworkDescription": {
     "message": "Bạn có chắc chắn muốn xóa mạng này không?"
+  },
+  "depositEther": {
+    "message": "Nộp Ether"
   },
   "description": {
     "message": "Mô tả"
@@ -1284,6 +1293,9 @@
   "high": {
     "message": "Linh hoạt"
   },
+  "highGasSettingToolTipDialog": {
+    "message": "Có khả năng cao, ngay cả trong thị trường biến động"
+  },
   "highGasSettingToolTipMessage": {
     "message": "Sử dụng $1 để bù đắp khi lưu lượng mạng lưới tăng vọt trong những trường hợp như phát hành NFT nổi tiếng.",
     "description": "$1 is key 'high' (text: 'Aggressive') separated here so that it can be passed in with bold fontweight"
@@ -1444,7 +1456,7 @@
     "message": "Địa chỉ hợp đồng đã biết."
   },
   "knownTokenWarning": {
-    "message": "Hành động này sẽ chỉnh sửa các token đã niêm yết trong ví của bạn, kẻ xấu có thể lợi dụng việc này để lừa đảo bạn. Chỉ phê duyệt nếu bạn chắc chắn rằng bạn muốn thay đổi giá trị mà những token này đại diện cho. Tìm hiểu thêm về $1"
+    "message": "Hành động này sẽ chỉnh sửa các token đã niêm yết trong ví của bạn, kẻ xấu có thể lợi dụng việc này để lừa đảo bạn. Chỉ phê duyệt nếu bạn chắc chắn rằng bạn muốn thay đổi giá trị mà những token này đại diện cho."
   },
   "kovan": {
     "message": "Mạng thử nghiệm Kovan"
@@ -1692,6 +1704,9 @@
   },
   "name": {
     "message": "Tên"
+  },
+  "needEtherInWallet": {
+    "message": "Để tương tác với các ứng dụng phi tập trung bằng MetaMask, bạn sẽ cần phải có Ether trong ví của mình."
   },
   "needHelp": {
     "message": "Bạn cần trợ giúp? Liên hệ $1",
@@ -2459,6 +2474,9 @@
   "sendingNativeAsset": {
     "message": "Gửi $1",
     "description": "$1 represents the native currency symbol for the current network (e.g. ETH or BNB)"
+  },
+  "separateEachWord": {
+    "message": "Phân tách mỗi từ bằng một dấu cách"
   },
   "setAdvancedPrivacySettings": {
     "message": "Thiết lập cài đặt quyền riêng tư nâng cao"
@@ -3371,6 +3389,9 @@
   },
   "walletCreationSuccessTitle": {
     "message": "Tạo ví thành công"
+  },
+  "walletSeedRestore": {
+    "message": "Cụm mật khẩu khôi phục bí mật của ví"
   },
   "web3ShimUsageNotification": {
     "message": "Chúng tôi nhận thấy rằng trang web hiện tại đã cố dùng API window.web3 đã bị xóa. Nếu trang web có vẻ như đã bị lỗi, vui lòng nhấp vào $1 để biết thêm thông tin.",

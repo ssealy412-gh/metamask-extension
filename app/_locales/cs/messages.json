@@ -108,6 +108,9 @@
   "decimalsMustZerotoTen": {
     "message": "Desetinných míst musí být od 0 do 36."
   },
+  "depositEther": {
+    "message": "Vložit Ether"
+  },
   "details": {
     "message": "Podrobnosti"
   },
@@ -242,6 +245,9 @@
   },
   "myAccounts": {
     "message": "Moje účty"
+  },
+  "needEtherInWallet": {
+    "message": "Potřebujete Ether v peněžence, abyste mohli pomocí MetaMasku interagovat s decentralizovanými aplikacemi."
   },
   "needImportFile": {
     "message": "Musíte zvolit soubor k importu.",

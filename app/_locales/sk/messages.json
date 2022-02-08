@@ -286,6 +286,9 @@
   "deleteNetworkDescription": {
     "message": "Naozaj chcete túto sieť odstrániť?"
   },
+  "depositEther": {
+    "message": "Vložit Ether"
+  },
   "details": {
     "message": "Podrobnosti"
   },
@@ -565,6 +568,9 @@
   "myAccounts": {
     "message": "Moje účty"
   },
+  "needEtherInWallet": {
+    "message": "Potřebujete Ether v peněžence, abyste mohli pomocí MetaMasku interagovat s decentralizovanými aplikacemi."
+  },
   "needImportFile": {
     "message": "Musíte zvolit soubor k importu.",
     "description": "User is important an account and needs to add a file to continue"
@@ -838,6 +844,9 @@
   },
   "sendTokens": {
     "message": "Odeslat tokeny"
+  },
+  "separateEachWord": {
+    "message": "Každé slovo oddeľte jednou medzerou"
   },
   "settings": {
     "message": "Nastavení"

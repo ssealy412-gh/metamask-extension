@@ -389,6 +389,12 @@
   "buy": {
     "message": "Satın Al"
   },
+  "buyWithTransak": {
+    "message": "Transak ile ETH satın alın"
+  },
+  "buyWithTransakDescription": {
+    "message": "Transak 59'dan fazla ülkede banka kartı ve banka transferlerini (konuma bağlı olarak) destekler. MetaMask hesabınıza ETH para yatırma işlemleri."
+  },
   "buyWithWyre": {
     "message": "Wyre ile ETH satın al"
   },
@@ -714,6 +720,9 @@
   },
   "deleteNetworkDescription": {
     "message": "Bu ağı silmek istediğinizden emin misiniz?"
+  },
+  "depositEther": {
+    "message": "Ether yatır"
   },
   "description": {
     "message": "Açıklama"
@@ -1284,6 +1293,9 @@
   "high": {
     "message": "Agresif"
   },
+  "highGasSettingToolTipDialog": {
+    "message": "Dalgalı piyasalarda dahi yüksek olasılık"
+  },
   "highGasSettingToolTipMessage": {
     "message": "Popüler NFT düşüşleri gibi şeyler nedeniyle ağ trafiğindeki dalgalanmaları kapsayacak şekilde $1 kullanın.",
     "description": "$1 is key 'high' (text: 'Aggressive') separated here so that it can be passed in with bold fontweight"
@@ -1444,7 +1456,7 @@
     "message": "Bilinen sözleşme adresi."
   },
   "knownTokenWarning": {
-    "message": "Bu eylem kimlik avı için kullanılabilecek şekilde cüzdanınızda zaten listelenmiş olan tokenleri düzenleyecektir. Sadece bu tokenlerin neyi temsil ettiğini değiştirmek istediğinizden eminseniz onaylayın. $1 hakkında daha fazla bilgi edinin"
+    "message": "Bu eylem kimlik avı için kullanılabilecek şekilde cüzdanınızda zaten listelenmiş olan tokenleri düzenleyecektir. Sadece bu tokenlerin neyi temsil ettiğini değiştirmek istediğinizden eminseniz onaylayın."
   },
   "kovan": {
     "message": "Kovan Test Ağı"
@@ -1692,6 +1704,9 @@
   },
   "name": {
     "message": "Adı"
+  },
+  "needEtherInWallet": {
+    "message": "MetaMask kullanarak merkezi olamayan uygulamalarla etkileşmek için cüzdanınızda Ether bulunmalıdır."
   },
   "needHelp": {
     "message": "Yardıma mı ihtiyacınız var? $1 bölümüne ulaşın",
@@ -2459,6 +2474,9 @@
   "sendingNativeAsset": {
     "message": "$1 Gönderiliyor",
     "description": "$1 represents the native currency symbol for the current network (e.g. ETH or BNB)"
+  },
+  "separateEachWord": {
+    "message": "Her kelimeyi tek bir boşluk ile ayırın"
   },
   "setAdvancedPrivacySettings": {
     "message": "Gelişmiş gizlilik ayarlarını yapın"
@@ -3371,6 +3389,9 @@
   },
   "walletCreationSuccessTitle": {
     "message": "Cüzdan oluşturma başarılı"
+  },
+  "walletSeedRestore": {
+    "message": "Cüzdan Gizli Kurtarma İfadesi"
   },
   "web3ShimUsageNotification": {
     "message": "Mevcut web sitesinin kaldırılmış olan window.web3 API'sini kullanmaya çalıştığını fark ettik. Site bozuk görünüyorsa daha fazla bilgi için lütfen $1 bağlantısına tıklayın.",

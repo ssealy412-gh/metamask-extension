@@ -389,6 +389,12 @@
   "buy": {
     "message": "Bilhin"
   },
+  "buyWithTransak": {
+    "message": "Bumili ng ETH gamit ang Transak"
+  },
+  "buyWithTransakDescription": {
+    "message": "Magagamit sa Transak ang debit card at mga bank transfer (depende sa lokasyon) sa 59+ na bansa. Mga depositong ETH sa iyong MetaMask account."
+  },
   "buyWithWyre": {
     "message": "Bumili ng ETH gamit ang Wyre"
   },
@@ -714,6 +720,9 @@
   },
   "deleteNetworkDescription": {
     "message": "Sigurado ka bang gusto mong i-delete ang network na ito?"
+  },
+  "depositEther": {
+    "message": "Mag-deposit ng Ether"
   },
   "description": {
     "message": "Deskripsyon"
@@ -1284,6 +1293,9 @@
   "high": {
     "message": "Agresibo"
   },
+  "highGasSettingToolTipDialog": {
+    "message": "Mataas na probabilidad, kahit sa mga pabagu-bagong market"
+  },
   "highGasSettingToolTipMessage": {
     "message": "Gamitin ang $1 upang pagtakpan ang mga surge sa network traffic dahil sa mga bagay tulad ng popular na pagbagsak ng NFT.",
     "description": "$1 is key 'high' (text: 'Aggressive') separated here so that it can be passed in with bold fontweight"
@@ -1444,7 +1456,7 @@
     "message": "Kilalang address ng kontrata."
   },
   "knownTokenWarning": {
-    "message": "Mae-edit ng aksyong ito ang mga token na nakalista na sa iyong wallet, na puwedeng gamitin para i-phish ka. Aprubahan lang kung sigurado kang gusto mong baguhin kung ano ang kinakatawan ng mga token na ito. Alamin pa ang tungkol sa $1"
+    "message": "Mae-edit ng aksyong ito ang mga token na nakalista na sa iyong wallet, na puwedeng gamitin para i-phish ka. Aprubahan lang kung sigurado kang gusto mong baguhin kung ano ang kinakatawan ng mga token na ito."
   },
   "kovan": {
     "message": "Kovan Test Network"
@@ -1692,6 +1704,9 @@
   },
   "name": {
     "message": "Pangalan"
+  },
+  "needEtherInWallet": {
+    "message": "Para makaugnayan ang mga decentralized ma application gamit ang MetaMask, kakailanganin mo ang Ether sa iyong wallet."
   },
   "needHelp": {
     "message": "Kailangan ng tulong? Kontakin ang $1",
@@ -2459,6 +2474,9 @@
   "sendingNativeAsset": {
     "message": "Nagpapadala ng $1",
     "description": "$1 represents the native currency symbol for the current network (e.g. ETH or BNB)"
+  },
+  "separateEachWord": {
+    "message": "Paghiwa-hiwalayin ang bawat salita gamit ang espasyo"
   },
   "setAdvancedPrivacySettings": {
     "message": "Magtakda ng advanced privacy settings"
@@ -3371,6 +3389,9 @@
   },
   "walletCreationSuccessTitle": {
     "message": "Matagumpay ang paggawa ng wallet"
+  },
+  "walletSeedRestore": {
+    "message": "Recovery Phrase ng Wallet Secret"
   },
   "web3ShimUsageNotification": {
     "message": "Napansin namin na sinubukan ng kasalukuyang website na gamitin ang inalis na window.web3 API. Kung mukhang sira ang site, paki-click ang $1 para sa karagdagang impormasyon.",

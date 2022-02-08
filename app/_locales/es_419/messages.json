@@ -389,6 +389,12 @@
   "buy": {
     "message": "Comprar"
   },
+  "buyWithTransak": {
+    "message": "Comprar ETH con Transak"
+  },
+  "buyWithTransakDescription": {
+    "message": "Transak acepta tarjetas de débito y transferencias bancarias (dependiendo de la ubicación) en más de 59 países. Depósitos de ETH en su cuenta de MetaMask."
+  },
   "buyWithWyre": {
     "message": "Comprar ETH con Wyre"
   },
@@ -649,6 +655,10 @@
   "customGas": {
     "message": "Personalizar gas"
   },
+  "customGasSettingToolTipMessage": {
+    "message": "Use 1$ para personalizar el precio de gas. Esto puede resultar confuso si no está familiarizado. Interactúe bajo su propio riesgo.",
+    "description": "$1 is key 'advanced' (text: 'Advanced') separated here so that it can be passed in with bold fontweight"
+  },
   "customGasSubTitle": {
     "message": "Aumentar la tarifa puede disminuir los tiempos de procesamiento, pero no se garantiza esto."
   },
@@ -718,6 +728,9 @@
   },
   "deleteNetworkDescription": {
     "message": "¿Está seguro de que quiere eliminar esta red?"
+  },
+  "depositEther": {
+    "message": "Depositar ether"
   },
   "description": {
     "message": "Descripción"
@@ -1337,6 +1350,13 @@
   "high": {
     "message": "Agresivo"
   },
+  "highGasSettingToolTipDialog": {
+    "message": "Alta probabilidad, incluso en los mercados volátiles"
+  },
+  "highGasSettingToolTipMessage": {
+    "message": "Usee 1$ para cubrir los aumentos de tráfico en la red debidos a cosas como las caídas de NFT populares.",
+    "description": "$1 is key 'high' (text: 'Aggressive') separated here so that it can be passed in with bold fontweight"
+  },
   "highLowercase": {
     "message": "alta"
   },
@@ -1608,6 +1628,9 @@
   "lowLowercase": {
     "message": "baja"
   },
+  "lowPriorityMessage": {
+    "message": "Las futuras transacciones permanecerán en cola después de esta. Este precio se vio por última vez hace algún tiempo."
+  },
   "mainnet": {
     "message": "Red principal de Ethereum"
   },
@@ -1738,6 +1761,9 @@
   },
   "name": {
     "message": "Nombre"
+  },
+  "needEtherInWallet": {
+    "message": "Para interactuar con aplicaciones descentralizadas mediante MetaMask, necesitará ethers en su cartera."
   },
   "needHelp": {
     "message": "¿Necesita ayuda? Comuníquese con $1",
@@ -2511,6 +2537,9 @@
   "sendingNativeAsset": {
     "message": "Enviando $1",
     "description": "$1 represents the native currency symbol for the current network (e.g. ETH or BNB)"
+  },
+  "separateEachWord": {
+    "message": "Separar cada palabra con un solo espacio"
   },
   "setAdvancedPrivacySettings": {
     "message": "Configuración avanzada de privacidad"
@@ -3429,6 +3458,9 @@
   },
   "walletCreationSuccessTitle": {
     "message": "Creación exitosa de la cartera"
+  },
+  "walletSeedRestore": {
+    "message": "Frase secreta de recuperación de la cartera"
   },
   "web3ShimUsageNotification": {
     "message": "Parece que el sitio web actual intentó utilizar la API de window.web3 que se eliminó. Si el sitio no funciona, haga clic en $1 para obtener más información.",

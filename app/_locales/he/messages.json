@@ -292,6 +292,9 @@
   "deleteNetworkDescription": {
     "message": "הנך בטוח/ה שברצונך למחוק רשת זו?"
   },
+  "depositEther": {
+    "message": "הפקדת את'ר"
+  },
   "details": {
     "message": "פרטים"
   },
@@ -590,6 +593,9 @@
   "myAccounts": {
     "message": "החשבונות שלי"
   },
+  "needEtherInWallet": {
+    "message": "כדי לתקשר עם אפליקציות מבוזרות באמצעות MetaMask, צריך להיות לך את'ר בארנק."
+  },
   "needImportFile": {
     "message": "יש לבחור קובץ לייצוא.",
     "description": "User is important an account and needs to add a file to continue"
@@ -869,6 +875,9 @@
   },
   "sendTokens": {
     "message": "שלח טוקנים"
+  },
+  "separateEachWord": {
+    "message": "יש להפריד כל מילה עם רווח יחיד"
   },
   "settings": {
     "message": "הגדרות"

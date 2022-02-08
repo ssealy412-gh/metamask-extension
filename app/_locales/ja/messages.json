@@ -389,6 +389,12 @@
   "buy": {
     "message": "購入"
   },
+  "buyWithTransak": {
+    "message": "TransakでETHを購入"
+  },
+  "buyWithTransakDescription": {
+    "message": "Transakは59か国以上でデビットカードと銀行振込 (場所によって異なります) をサポートしています。ETHはMetaMaskアカウントに入金されます。"
+  },
   "buyWithWyre": {
     "message": "WyreでETHを購入"
   },
@@ -714,6 +720,9 @@
   },
   "deleteNetworkDescription": {
     "message": "このネットワークを削除しますか?"
+  },
+  "depositEther": {
+    "message": "Ether 入金"
   },
   "description": {
     "message": "説明"
@@ -1284,6 +1293,9 @@
   "high": {
     "message": "積極的"
   },
+  "highGasSettingToolTipDialog": {
+    "message": "変動の激しい市場においても高い確率"
+  },
   "highGasSettingToolTipMessage": {
     "message": "人気のNFTドロップなどによるネットワークトラフィックの急増に備えるため、$1を使用してください。",
     "description": "$1 is key 'high' (text: 'Aggressive') separated here so that it can be passed in with bold fontweight"
@@ -1444,7 +1456,7 @@
     "message": "既知のコントラクトアドレスです。"
   },
   "knownTokenWarning": {
-    "message": "このアクションは、ウォレットに既に一覧表示されているトークンを編集します。これは、フィッシングに使用される可能性があります。これらのトークンの表す内容を変更する意図が確実な場合にのみ承認します。$1に関する詳細をご覧ください"
+    "message": "このアクションは、ウォレットに既に一覧表示されているトークンを編集します。これは、フィッシングに使用される可能性があります。これらのトークンの表す内容を変更する意図が確実な場合にのみ承認します。"
   },
   "kovan": {
     "message": "Kovanテストネットワーク"
@@ -1692,6 +1704,9 @@
   },
   "name": {
     "message": "名前"
+  },
+  "needEtherInWallet": {
+    "message": "MetaMask を使用して分散型アプリケーションとやりとりするには、ウォレットに Ether が必要です。"
   },
   "needHelp": {
     "message": "アシスタンスが必要な場合は、$1にお問い合わせください",
@@ -2459,6 +2474,9 @@
   "sendingNativeAsset": {
     "message": "$1を送信中",
     "description": "$1 represents the native currency symbol for the current network (e.g. ETH or BNB)"
+  },
+  "separateEachWord": {
+    "message": "単語ごとにスペースを 1 つ置いて分離します"
   },
   "setAdvancedPrivacySettings": {
     "message": "高度なプライバシー設定を設定"
@@ -3371,6 +3389,9 @@
   },
   "walletCreationSuccessTitle": {
     "message": "ウォレットが作成されました"
+  },
+  "walletSeedRestore": {
+    "message": "ウォレット シークレット リカバリー フレーズ"
   },
   "web3ShimUsageNotification": {
     "message": "現在のWebサイトが、削除済みのwindow.web3 APIの使用を検知しました。サイトが破損しているようであれば、$1をクリックして詳細を確認してください。",
