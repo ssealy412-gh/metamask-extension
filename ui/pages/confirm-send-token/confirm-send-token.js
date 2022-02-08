@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import ConfirmTokenTransactionBase from '../confirm-token-transaction-base/confirm-token-transaction-base.component';
 import { SEND_ROUTE } from '../../helpers/constants/routes';
 import { ASSET_TYPES, editTransaction } from '../../ducks/send';
 import {
   contractExchangeRateSelector,
-  currentNetworkTxListSelector,
   getCurrentCurrency,
 } from '../../selectors';
 import {
@@ -15,15 +14,21 @@ import {
   getNativeCurrency,
 } from '../../ducks/metamask/metamask';
 import { ERC20, ERC721 } from '../../helpers/constants/common';
-import { getMaximumGasTotalInHexWei } from '../../../shared/modules/gas.utils';
+import { clearConfirmTransaction } from '../../ducks/confirm-transaction/confirm-transaction.duck';
+import { showSendTokenPage } from '../../store/actions';
 
 export default function ConfirmSendToken({
   assetStandard,
+  toAddress,
   assetName,
   tokenSymbol,
   tokenAmount,
   tokenId,
   transaction,
+  image,
+  ethTransactionTotal,
+  fiatTransactionTotal,
+  hexMaximumTransactionFee,
 }) {
   const dispatch = useDispatch();
   const history = useHistory();
@@ -42,39 +47,18 @@ export default function ConfirmSendToken({
         assetDetails,
       ),
     );
+    dispatch(clearConfirmTransaction());
+    dispatch(showSendTokenPage());
   };
 
   const handleEdit = (confirmTransactionData) => {
     handlEditTransaction(confirmTransactionData);
     history.push(SEND_ROUTE);
   };
-  const params = useParams();
-  const currentNetworkTxList = useSelector(currentNetworkTxListSelector);
   const conversionRate = useSelector(getConversionRate);
   const nativeCurrency = useSelector(getNativeCurrency);
   const currentCurrency = useSelector(getCurrentCurrency);
   const contractExchangeRate = useSelector(contractExchangeRateSelector);
-  const { id: paramsTransactionId } = params;
-
-  // const {
-  //   txData: {
-  //     id: transactionId,
-  //     txParams: { to: tokenAddress, data } = {},
-  //   } = {},
-  // } = confirmTransaction;
-
-  const hexMaximumTransactionFee = getMaximumGasTotalInHexWei({
-    gasLimit: transaction.gas ?? '0x0',
-    gasPrice: transaction.gasPrice ?? '0x0',
-  });
-  // const { hexMaximumTransactionFee } = transactionFeeSelector(
-  //   state,
-  //   transaction,
-  // );
-
-  // const ethTransactionTotalMaxAmount = Number(
-  //   hexWEIToDecETH(hexMaximumTransactionFee),
-  // ).toFixed(6);
 
   let title, subtitle;
 
@@ -91,7 +75,6 @@ export default function ConfirmSendToken({
       conversionRate={conversionRate}
       currentCurrency={currentCurrency}
       nativeCurrency={nativeCurrency}
-      // hexMaximumTransactionFee={hexMaximumTransactionFee}
       contractExchangeRate={contractExchangeRate}
       title={title}
       subtitle={subtitle}
@@ -101,11 +84,32 @@ export default function ConfirmSendToken({
       tokenAmount={tokenAmount}
       tokenId={tokenId}
       transaction={transaction}
-      // {...props}
+      image={image}
+      toAddress={toAddress}
+      ethTransactionTotal={ethTransactionTotal}
+      fiatTransactionTotal={fiatTransactionTotal}
+      hexMaximumTransactionFee={hexMaximumTransactionFee}
     />
   );
 }
 
 ConfirmSendToken.propTypes = {
   tokenAmount: PropTypes.string,
+  assetStandard: PropTypes.string,
+  assetName: PropTypes.string,
+  tokenSymbol: PropTypes.string,
+  image: PropTypes.string,
+  tokenId: PropTypes.string,
+  toAddress: PropTypes.string,
+  transaction: PropTypes.shape({
+    origin: PropTypes.string,
+    txParams: PropTypes.shape({
+      data: PropTypes.string,
+      to: PropTypes.string,
+      from: PropTypes.string,
+    }),
+  }),
+  ethTransactionTotal: PropTypes.string,
+  fiatTransactionTotal: PropTypes.string,
+  hexMaximumTransactionFee: PropTypes.string,
 };

@@ -51,7 +51,6 @@ export default function ConfirmApprove({
   tokenAmount,
   tokenId,
   userAddress,
-  tokenAddress,
   toAddress,
   transaction,
   ethTransactionTotal,
@@ -276,7 +275,6 @@ ConfirmApprove.propTypes = {
   tokenAmount: PropTypes.string,
   tokenId: PropTypes.string,
   userAddress: PropTypes.string,
-  tokenAddress: PropTypes.string,
   toAddress: PropTypes.string,
   transaction: PropTypes.shape({
     origin: PropTypes.string,
