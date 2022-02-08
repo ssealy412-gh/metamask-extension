@@ -6,19 +6,13 @@ import Loading from '../../components/ui/loading-screen';
 import ConfirmTransactionSwitch from '../confirm-transaction-switch';
 import ConfirmTransactionBase from '../confirm-transaction-base';
 import ConfirmSendEther from '../confirm-send-ether';
-import ConfirmSendToken from '../confirm-send-token';
 import ConfirmDeployContract from '../confirm-deploy-contract';
-import ConfirmApprove from '../confirm-approve';
-import ConfirmTokenTransactionBaseContainer from '../confirm-token-transaction-base';
 import ConfirmDecryptMessage from '../confirm-decrypt-message';
 import ConfirmEncryptionPublicKey from '../confirm-encryption-public-key';
 import {
   CONFIRM_TRANSACTION_ROUTE,
   CONFIRM_DEPLOY_CONTRACT_PATH,
   CONFIRM_SEND_ETHER_PATH,
-  CONFIRM_SEND_TOKEN_PATH,
-  CONFIRM_APPROVE_PATH,
-  CONFIRM_TRANSFER_FROM_PATH,
   CONFIRM_TOKEN_METHOD_PATH,
   SIGNATURE_REQUEST_PATH,
   DECRYPT_MESSAGE_REQUEST_PATH,

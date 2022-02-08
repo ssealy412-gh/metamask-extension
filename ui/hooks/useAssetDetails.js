@@ -44,6 +44,10 @@ export function useAssetDetails(tokenAddress, userAddress, transactionData) {
       getAndSetAssetDetails();
     }
   }, [
+    dispatch,
+    prevTokenAddress,
+    prevTransactionData,
+    prevUserAddress,
     tokenAddress,
     userAddress,
     transactionData,
@@ -78,7 +82,6 @@ export function useAssetDetails(tokenAddress, userAddress, transactionData) {
     if (assetStandard === ERC20) {
       userBalance = currentAsset?.balance;
       decimals = Number(currentAsset?.decimals.toString(10));
-      // WHY DO WE GET DIFFERENT VALUES FROM INTERNAL AND EXTERNAL CALL HERE...
       tokenAmount =
         tokenData &&
         calcTokenAmount(getTokenValueParam(tokenData), decimals).toString(10);

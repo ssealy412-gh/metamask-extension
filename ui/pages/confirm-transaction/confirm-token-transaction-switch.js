@@ -4,7 +4,6 @@ import { Switch, Route } from 'react-router-dom';
 import {
   CONFIRM_APPROVE_PATH,
   CONFIRM_SEND_TOKEN_PATH,
-  CONFIRM_TOKEN_METHOD_PATH,
   CONFIRM_TRANSACTION_ROUTE,
   CONFIRM_TRANSFER_FROM_PATH,
 } from '../../helpers/constants/routes';
@@ -12,7 +11,6 @@ import { transactionFeeSelector } from '../../selectors';
 import ConfirmApprove from '../confirm-approve';
 import ConfirmSendToken from '../confirm-send-token';
 import ConfirmTokenTransactionBase from '../confirm-token-transaction-base/confirm-token-transaction-base.component';
-import ConfirmTransactionBase from '../confirm-transaction-base';
 import ConfirmTransactionSwitch from '../confirm-transaction-switch';
 
 const { useAssetDetails } = require('../../hooks/useAssetDetails');
