@@ -1077,7 +1077,6 @@ export default class MetamaskController extends EventEmitter {
       appStateController,
       collectiblesController,
       collectibleDetectionController,
-      assetsContractController,
       currencyRateController,
       detectTokensController,
       ensController,
@@ -1231,9 +1230,7 @@ export default class MetamaskController extends EventEmitter {
       ),
 
       // AssetsContractController
-      getTokenStandardAndDetails: assetsContractController.getTokenStandardAndDetails.bind(
-        assetsContractController,
-      ),
+      getTokenStandardAndDetails: this.getTokenStandardAndDetails.bind(this),
 
       // CollectiblesController
       addCollectible: collectiblesController.addCollectible.bind(
@@ -1510,6 +1507,19 @@ export default class MetamaskController extends EventEmitter {
             collectibleDetectionController,
           )
         : null,
+    };
+  }
+
+  async getTokenStandardAndDetails(address, userAddress, tokenId) {
+    const details = await this.assetsContractController.getTokenStandardAndDetails(
+      address,
+      userAddress,
+      tokenId,
+    );
+    return {
+      ...details,
+      decimals: details?.decimals.toString(10),
+      balance: details?.balance.toString(10),
     };
   }
 
