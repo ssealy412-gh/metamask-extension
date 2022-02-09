@@ -1518,8 +1518,8 @@ export default class MetamaskController extends EventEmitter {
     );
     return {
       ...details,
-      decimals: details?.decimals.toString(10),
-      balance: details?.balance.toString(10),
+      decimals: details?.decimals?.toString(10),
+      balance: details?.balance?.toString(10),
     };
   }
 

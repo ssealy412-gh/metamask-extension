@@ -453,6 +453,7 @@ describe('MetaMask', function () {
     });
 
     it('customizes gas', async function () {
+      await driver.delay(largeDelayMs);
       await driver.clickElement({ text: 'Edit', tag: 'button' });
       await driver.delay(largeDelayMs);
       await driver.clickElement(

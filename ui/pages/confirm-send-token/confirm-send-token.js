@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import ConfirmTokenTransactionBase from '../confirm-token-transaction-base/confirm-token-transaction-base.component';
+import ConfirmTokenTransactionBase from '../confirm-token-transaction-base/confirm-token-transaction-base';
 import { SEND_ROUTE } from '../../helpers/constants/routes';
 import { ASSET_TYPES, editTransaction } from '../../ducks/send';
 import {
@@ -20,6 +20,7 @@ import { showSendTokenPage } from '../../store/actions';
 export default function ConfirmSendToken({
   assetStandard,
   toAddress,
+  tokenAddress,
   assetName,
   tokenSymbol,
   tokenAmount,
@@ -86,6 +87,7 @@ export default function ConfirmSendToken({
       transaction={transaction}
       image={image}
       toAddress={toAddress}
+      tokenAddress={tokenAddress}
       ethTransactionTotal={ethTransactionTotal}
       fiatTransactionTotal={fiatTransactionTotal}
       hexMaximumTransactionFee={hexMaximumTransactionFee}
@@ -101,6 +103,7 @@ ConfirmSendToken.propTypes = {
   image: PropTypes.string,
   tokenId: PropTypes.string,
   toAddress: PropTypes.string,
+  tokenAddress: PropTypes.string,
   transaction: PropTypes.shape({
     origin: PropTypes.string,
     txParams: PropTypes.shape({
