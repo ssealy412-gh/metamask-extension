@@ -346,10 +346,11 @@ describe('MetaMask', function () {
       // Continue to next screen
       await driver.delay(largeDelayMs);
       await driver.clickElement({ text: 'Next', tag: 'button' });
-      await driver.delay(regularDelayMs);
+      await driver.delay(largeDelayMs);
     });
 
     it('displays the token transfer data', async function () {
+      await driver.delay(largeDelayMs);
       await driver.clickElement({ text: 'Hex', tag: 'button' });
       await driver.delay(regularDelayMs);
 
